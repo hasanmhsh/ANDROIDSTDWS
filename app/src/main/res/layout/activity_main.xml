@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hms.tvc.MainActivity">
+
+    <Button
+        android:id="@+id/r2_on_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="r2_on_onclick"
+        android:text="Relay2 ON" />
+
+    <Button
+        android:id="@+id/r1_on_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/r2_off_but"
+        android:onClick="r1_on_onclick"
+        android:text="Relay1 ON" />
+
+    <Button
+        android:id="@+id/noise_on_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/r1_off_but"
+        android:onClick="noise_on_onclick"
+        android:text="Noise ON" />
+
+    <Button
+        android:id="@+id/r2_off_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="r2_off_onclick"
+        android:text="Relay2 OFF" />
+
+    <Button
+        android:id="@+id/r1_off_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/r2_off_but"
+        android:onClick="r1_off_onclick"
+        android:text="Relay1 OFF" />
+
+    <Button
+        android:id="@+id/noise_off_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/noise_on_but"
+        android:layout_alignBottom="@+id/noise_on_but"
+        android:layout_alignParentRight="true"
+        android:onClick="noise_off_onclick"
+        android:text="Noise OFF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/save_but"
+        android:text="Result"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/clear_res_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:onClick="clear_onClick"
+        android:text="Clear" />
+
+    <EditText
+        android:id="@+id/exceptions_tb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/clear_res_but"
+        android:ems="10"
+        android:onClick="clear_onClick"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/kpalvON_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/noise_on_but"
+        android:onClick="klvon_onClick"
+        android:text="KAlive ON" />
+
+    <Button
+        android:id="@+id/kpalvOFF_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/kpalvON_but"
+        android:layout_alignBottom="@+id/kpalvON_but"
+        android:layout_alignParentRight="true"
+        android:onClick="klvoff_onClick"
+        android:text="KAlive OFF" />
+
+    <Button
+        android:id="@+id/save_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/clear_res_but"
+        android:layout_below="@+id/kpalvON_but"
+        android:onClick="save_onClick"
+        android:text="Save" />
+
+</RelativeLayout>
